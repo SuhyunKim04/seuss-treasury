@@ -6,12 +6,12 @@
     <div  v-for=" (quote,index) in quotes"
         :key="index"> 
         <div class="outside">
-            <div class="Qtext">
+            <p class="Qtext">
                 {{quote.text}}
-            </div>
-            <div class="Qsub">
+            </p>
+            <p class="Qsub">
                 <em> &#45; Dr. Seuss in </em> <strong>{{quote.book.title}}</strong>
-            </div>
+            </p>
         </div>
     </div>
     
