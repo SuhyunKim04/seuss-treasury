@@ -33,4 +33,6 @@ export default {
             .then(json => {this.quotes = json})
     }
 }
+
+// npm install axios
 </script>

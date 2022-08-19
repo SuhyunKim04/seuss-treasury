@@ -5,7 +5,7 @@
     </div>
     <section class="detailBox">
         <div class="detail">
-            <img class="one" v-bind:src="book.image" v-bind:alt="book.title">
+            <img class="one" :src="book.image" :alt="book.title">
         </div>
         <div class="article">
             <div class="sub">
@@ -31,9 +31,7 @@ export default {
             title:'',
             id: '',
             image: '',
-            description: '',
-         
-
+            description: '', 
          }
         }
     },
@@ -41,10 +39,11 @@ export default {
         fetch('https://seussology-api.herokuapp.com/api/books/' + this.id)
         .then(response => response.json())
         .then(json => {
-            this.book.title = json.title,
-            this.book.id = json.id,
-            this.book.image = json.image,
-            this.book.description = json.description
+            this.book.title = json.title
+            this.book.id = json.id;
+            this.book.image = json.image;
+            this.book.description = json.description; 
+            
         })
     }
             

@@ -27,7 +27,11 @@ export default {
     created: function () {
         fetch('https://seussology-api.herokuapp.com/api/books')
             .then(response => response.json())
-            .then(json => {this.books = json})
+            .then(json => {
+                this.books = json; 
+                })
+
+             
     }
 }
 </script>
